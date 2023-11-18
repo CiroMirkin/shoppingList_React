@@ -6,6 +6,9 @@
     list-style-type: disc;
 }
 .product {
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
     text-align: left;
     font-size: 2ch;
     font-weight: 700;

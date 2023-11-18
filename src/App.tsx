@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ProductList from './components/ProductList'
+import { deleteProduct } from './deleteProduct'
 
 export interface product {
   id: string,
@@ -39,6 +40,11 @@ function App() {
     }
   }
 
+  const deleteProductFromProductList = (IdOfProductToDelete: string) => {
+    const newProductList = deleteProduct(IdOfProductToDelete, productList)
+    setProductList(newProductList)
+  }
+
   return (
     <>
       <div>
@@ -46,7 +52,7 @@ function App() {
         <button onClick={handleClick}>Add product</button>
       </div>
       {
-        <ProductList productList={productList} />
+        <ProductList productList={productList} deleteProductFunction={deleteProductFromProductList} />
       }
     </>
   )
