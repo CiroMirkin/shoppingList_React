@@ -3,12 +3,7 @@ import '../styles/App.css'
 import ProductList from './ProductList'
 import { deleteProduct } from '../deleteProduct'
 import { checkProduct } from '../checkProduct'
-
-export interface product {
-  id: string,
-  productName: string,
-  check: boolean
-}
+import { product } from '../product'
 
 function App() {
   const [ newProductName, setNewProductName ] = useState("")
