@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import ProductList from './components/ProductList'
 import { deleteProduct } from './deleteProduct'
+import { checkProduct } from './checkProduct'
 
 export interface product {
   id: string,
@@ -44,6 +45,11 @@ function App() {
     const newProductList = deleteProduct(IdOfProductToDelete, productList)
     setProductList(newProductList)
   }
+  
+  const checkProductFromList = (IdOfProductToCheck: string) => {
+    const newProductList = checkProduct(IdOfProductToCheck, productList)
+    setProductList(newProductList)
+  }
 
   return (
     <>
@@ -52,7 +58,7 @@ function App() {
         <button onClick={handleClick}>Add product</button>
       </div>
       {
-        <ProductList productList={productList} deleteProductFunction={deleteProductFromProductList} />
+        <ProductList productList={productList} deleteProductFunction={deleteProductFromProductList} checkProductFunction={checkProductFromList}/>
       }
     </>
   )
