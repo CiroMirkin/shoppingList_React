@@ -1,0 +1,20 @@
+.product-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    list-style-type: disc;
+}
+.product {
+    text-align: left;
+    font-size: 2ch;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.product--green {
+    color: #7fff00;
+}
+.product--red {
+    color: #a52a2a;
+}

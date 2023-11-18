@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import ProductList from './components/ProductList'
 
 export interface product {
   id: string,
@@ -44,6 +45,9 @@ function App() {
         <input type="text" value={newProductName} onChange={(e) => setNewProductName(e.target.value)} />
         <button onClick={handleClick}>Add product</button>
       </div>
+      {
+        <ProductList productList={productList} />
+      }
     </>
   )
 }
