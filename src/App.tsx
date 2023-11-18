@@ -14,12 +14,11 @@ function App() {
   const [ newProductName, setNewProductName ] = useState("")
   const [ productList, setProductList ] = useState([
     {
-      id: "0",
+      id: "DefaultProduct",
       productName: "",
       check: false
     }
   ])
-  const deleteDefaultProduct = (productListWithDefaultProduct: product[]) => productListWithDefaultProduct.shift()
   
   const handleClick = () => {
     const newProduct: product = {
@@ -28,9 +27,6 @@ function App() {
       check: false
     }
     const newProductList: product[] = [...productList]
-
-    const isThereTheDefaultProduct = !newProductList[0].productName
-    if(isThereTheDefaultProduct) deleteDefaultProduct(newProductList)
 
     const theNameOfNewProductIsNotBlank = !!newProduct.productName.trim()
     if(theNameOfNewProductIsNotBlank) {
