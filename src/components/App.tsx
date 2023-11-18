@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './App.css'
-import ProductList from './components/ProductList'
-import { deleteProduct } from './deleteProduct'
-import { checkProduct } from './checkProduct'
+import '../styles/App.css'
+import ProductList from './ProductList'
+import { deleteProduct } from '../deleteProduct'
+import { checkProduct } from '../checkProduct'
 
 export interface product {
   id: string,

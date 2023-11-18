@@ -1,4 +1,4 @@
-import { product } from '../App'
+import { product } from './App'
 import '../styles/ProductInList.css'
 
 export interface ProductInListProps {

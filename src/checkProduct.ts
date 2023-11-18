@@ -1,4 +1,4 @@
-import { product } from "./App";
+import { product } from "./components/App";
 
 export const checkProduct = (IdOfProductToCheck: string, productList: product[]) => {
     return [...productList].map(product => {

@@ -1,5 +1,5 @@
 import { MagicMotion } from 'react-magic-motion'
-import { product } from '../App'
+import { product } from './App'
 import '../styles/ProductList.css'
 import ProductInList from './ProductInList'
 
