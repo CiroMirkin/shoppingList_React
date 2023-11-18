@@ -14,9 +14,11 @@ function ProductInList({ productInList, deleteProductFunction, checkProductFunct
     if(productInList.id === "DefaultProduct") return;
     return (
         <li key={productInList.id} className={productInListClassName}>
-            { productInList.productName }
-            <button onClick={() => checkProductFunction(productInList.id)}>Check</button>
-            <button onClick={() => deleteProductFunction(productInList.id)}>Delete</button>
+            <header>{ productInList.productName }</header>
+            <footer>
+                <button onClick={() => checkProductFunction(productInList.id)}>Check</button>
+                <button onClick={() => deleteProductFunction(productInList.id)}>Delete</button>
+            </footer>
         </li>
     )
 }

@@ -1,3 +1,4 @@
+import { MagicMotion } from 'react-magic-motion'
 import { product } from '../App'
 import '../styles/ProductList.css'
 import ProductInList from './ProductInList'
@@ -12,15 +13,17 @@ function ProductList({ productList, deleteProductFunction, checkProductFunction 
 
   return (
     <>
-      <ul className='product-list'>
-        {
-            productList.length === 1 && productList[0].id === "DefaultProduct"
-            ? <li style={{listStyle: "none"}}>No products yet</li>
-            : productList.map(product => 
-                <ProductInList key={product.id} productInList={product} deleteProductFunction={deleteProductFunction} checkProductFunction={checkProductFunction} />
-            )
-        }
-      </ul>
+      <MagicMotion>
+        <ul className='product-list'>
+          {
+              productList.length === 1 && productList[0].id === "DefaultProduct"
+              ? <li style={{listStyle: "none"}}>No products yet</li>
+              : productList.map(product => 
+                  <ProductInList key={product.id} productInList={product} deleteProductFunction={deleteProductFunction} checkProductFunction={checkProductFunction} />
+              )
+          }
+        </ul>
+      </MagicMotion>
     </>
   )
 }

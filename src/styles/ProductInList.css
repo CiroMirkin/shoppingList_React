@@ -1,11 +1,27 @@
 .product {
     max-width: 550px;
+    padding: 4px 6px;
+    margin: 6px 0;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    background: #363535;
+    color: rgba(255, 255, 255, 0.87);
+    border: none;
+    border-radius: .125rem;
+}
+.product header {
+    padding-inline: 4px;
     text-align: left;
     font-size: 2ch;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.87);
+}
+.product footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .product--green {
