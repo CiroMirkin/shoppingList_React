@@ -3,10 +3,11 @@ import '../styles/ProductList.css'
 
 export interface ProductListProps {
     productList: product[],
-    deleteProductFunction(IdOfProductToDelete: string): any
+    deleteProductFunction(IdOfProductToDelete: string): any,
+    checkProductFunction(IdOfProductToCheck: string): any,
 }
 
-function ProductList({ productList, deleteProductFunction }: ProductListProps) {
+function ProductList({ productList, deleteProductFunction, checkProductFunction }: ProductListProps) {
 
   return (
     <>
@@ -18,6 +19,7 @@ function ProductList({ productList, deleteProductFunction }: ProductListProps) {
                 return (
                     <li key={product.id} className={productClassName}>
                         { product.productName }
+                        <button onClick={() => checkProductFunction(product.id)}>Check</button>
                         <button onClick={() => deleteProductFunction(product.id)}>Delete</button>
                     </li>
                 )
